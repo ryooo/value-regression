@@ -6,8 +6,8 @@ settings:
 
 dependencies:
   '@actions/artifact':
-    specifier: ^2.1.1
-    version: 2.1.1
+    specifier: ^2.1.4
+    version: 2.1.4
   '@actions/core':
     specifier: ^1.10.1
     version: 1.10.1
@@ -114,22 +114,22 @@ packages:
     engines: {node: '>=0.10.0'}
     dev: true
 
-  /@actions/artifact@2.1.1:
-    resolution: {integrity: sha512-xVVwWhrRb4YLiTeYkNxctv9IhwIKUsLwIhqD9CKknXtQaqIksq5HttFN8wXQvMrpjQO4zGJf5xLUs6mKyfN4yQ==}
+  /@actions/artifact@2.1.4:
+    resolution: {integrity: sha512-nKgNduFA02drKt4rFqXsF6PjWmfKdxZDuWWdenoI1bBzgys3y8O7kw4gAS+gvLOT3EfsyV+mwTIisuXBjwQ3RA==}
     dependencies:
       '@actions/core': 1.10.1
       '@actions/github': 5.1.1
-      '@actions/http-client': 2.2.0
+      '@actions/http-client': 2.2.1
       '@azure/storage-blob': 12.17.0
       '@octokit/core': 3.6.0
       '@octokit/plugin-request-log': 1.0.4(@octokit/core@3.6.0)
       '@octokit/plugin-retry': 3.0.9
-      '@octokit/request-error': 5.0.1
-      '@protobuf-ts/plugin': 2.9.3
+      '@octokit/request-error': 5.1.0
+      '@protobuf-ts/plugin': 2.9.4
       archiver: 5.3.2
       crypto: 1.0.1
       jwt-decode: 3.1.2
-      twirp-ts: 2.5.0(@protobuf-ts/plugin@2.9.3)
+      twirp-ts: 2.5.0(@protobuf-ts/plugin@2.9.4)
       unzip-stream: 0.3.1
     transitivePeerDependencies:
       - encoding
@@ -152,7 +152,7 @@ packages:
   /@actions/github@5.1.1:
     resolution: {integrity: sha512-Nk59rMDoJaV+mHCOJPXuvB1zIbomlKS0dmSIqPGxd0enAXBnOfn4VWF+CGtRCwXZG9Epa54tZA7VIRlJDS8A6g==}
     dependencies:
-      '@actions/http-client': 2.2.0
+      '@actions/http-client': 2.2.1
       '@octokit/core': 3.6.0
       '@octokit/plugin-paginate-rest': 2.21.3(@octokit/core@3.6.0)
       '@octokit/plugin-rest-endpoint-methods': 5.16.2(@octokit/core@3.6.0)
@@ -176,6 +176,13 @@ packages:
       undici: 5.28.3
     dev: false
 
+  /@actions/http-client@2.2.1:
+    resolution: {integrity: sha512-KhC/cZsq7f8I4LfZSJKgCvEwfkE8o1538VoBeoGzokVLLnbFDEAdFD3UhoMklxo2un9NJVBdANOresx7vTHlHw==}
+    dependencies:
+      tunnel: 0.0.6
+      undici: 5.28.4
+    dev: false
+
   /@actions/io@1.1.3:
     resolution: {integrity: sha512-wi9JjgKLYS7U/z8PPbco+PvTb/nRWjeoFlJ1Qer83k/3C5PHQi28hiVdeE2kHXmIL99mQFawx8qt/JPjZilJ8Q==}
     dev: false
@@ -194,19 +201,19 @@ packages:
       tslib: 2.6.2
     dev: false
 
-  /@azure/abort-controller@2.0.0:
-    resolution: {integrity: sha512-RP/mR/WJchR+g+nQFJGOec+nzeN/VvjlwbinccoqfhTsTHbb8X5+mLDp48kHT0ueyum0BNSwGm0kX0UZuIqTGg==}
+  /@azure/abort-controller@2.1.1:
+    resolution: {integrity: sha512-NhzeNm5zu2fPlwGXPUjzsRCRuPx5demaZyNcyNYJDqpa/Sbxzvo/RYt9IwUaAOnDW5+r7J9UOE6f22TQnb9nhQ==}
     engines: {node: '>=18.0.0'}
     dependencies:
       tslib: 2.6.2
     dev: false
 
-  /@azure/core-auth@1.6.0:
-    resolution: {integrity: sha512-3X9wzaaGgRaBCwhLQZDtFp5uLIXCPrGbwJNWPPugvL4xbIGgScv77YzzxToKGLAKvG9amDoofMoP+9hsH1vs1w==}
+  /@azure/core-auth@1.7.1:
+    resolution: {integrity: sha512-dyeQwvgthqs/SlPVQbZQetpslXceHd4i5a7M/7z/lGEAVwnSluabnQOjF2/dk/hhWgMISusv1Ytp4mQ8JNy62A==}
     engines: {node: '>=18.0.0'}
     dependencies:
-      '@azure/abort-controller': 2.0.0
-      '@azure/core-util': 1.7.0
+      '@azure/abort-controller': 2.1.1
+      '@azure/core-util': 1.8.1
       tslib: 2.6.2
     dev: false
 
@@ -215,10 +222,10 @@ packages:
     engines: {node: '>=14.0.0'}
     dependencies:
       '@azure/abort-controller': 1.1.0
-      '@azure/core-auth': 1.6.0
+      '@azure/core-auth': 1.7.1
       '@azure/core-tracing': 1.0.0-preview.13
-      '@azure/core-util': 1.7.0
-      '@azure/logger': 1.0.4
+      '@azure/core-util': 1.8.1
+      '@azure/logger': 1.1.1
       '@types/node-fetch': 2.6.11
       '@types/tunnel': 0.0.3
       form-data: 4.0.0
@@ -232,19 +239,19 @@ packages:
       - encoding
     dev: false
 
-  /@azure/core-lro@2.6.0:
-    resolution: {integrity: sha512-PyRNcaIOfMgoUC01/24NoG+k8O81VrKxYARnDlo+Q2xji0/0/j2nIt8BwQh294pb1c5QnXTDPbNR4KzoDKXEoQ==}
+  /@azure/core-lro@2.7.1:
+    resolution: {integrity: sha512-kXSlrNHOCTVZMxpXNRqzgh9/j4cnNXU5Hf2YjMyjddRhCXFiFRzmNaqwN+XO9rGTsCOIaaG7M67zZdyliXZG9g==}
     engines: {node: '>=18.0.0'}
     dependencies:
-      '@azure/abort-controller': 2.0.0
-      '@azure/core-util': 1.7.0
-      '@azure/logger': 1.0.4
+      '@azure/abort-controller': 2.1.1
+      '@azure/core-util': 1.8.1
+      '@azure/logger': 1.1.1
       tslib: 2.6.2
     dev: false
 
-  /@azure/core-paging@1.5.0:
-    resolution: {integrity: sha512-zqWdVIt+2Z+3wqxEOGzR5hXFZ8MGKK52x4vFLw8n58pR6ZfKRx3EXYTxTaYxYHc/PexPUTyimcTWFJbji9Z6Iw==}
-    engines: {node: '>=14.0.0'}
+  /@azure/core-paging@1.6.1:
+    resolution: {integrity: sha512-3tKIQXSU3mlN+ITz0m2pXLnKK3oQ6/EVcW8ud011Iq+M0rx6Wnm7NUEpoMeOAEedeKlPtemrQzO6YWoDR71O5w==}
+    engines: {node: '>=18.0.0'}
     dependencies:
       tslib: 2.6.2
     dev: false
@@ -253,21 +260,21 @@ packages:
     resolution: {integrity: sha512-KxDlhXyMlh2Jhj2ykX6vNEU0Vou4nHr025KoSEiz7cS3BNiHNaZcdECk/DmLkEB0as5T7b/TpRcehJ5yV6NeXQ==}
     engines: {node: '>=12.0.0'}
     dependencies:
-      '@opentelemetry/api': 1.7.0
+      '@opentelemetry/api': 1.8.0
       tslib: 2.6.2
     dev: false
 
-  /@azure/core-util@1.7.0:
-    resolution: {integrity: sha512-Zq2i3QO6k9DA8vnm29mYM4G8IE9u1mhF1GUabVEqPNX8Lj833gdxQ2NAFxt2BZsfAL+e9cT8SyVN7dFVJ/Hf0g==}
+  /@azure/core-util@1.8.1:
+    resolution: {integrity: sha512-L3voj0StUdJ+YKomvwnTv7gHzguJO+a6h30pmmZdRprJCM+RJlGMPxzuh4R7lhQu1jNmEtaHX5wvTgWLDAmbGQ==}
     engines: {node: '>=18.0.0'}
     dependencies:
-      '@azure/abort-controller': 2.0.0
+      '@azure/abort-controller': 2.1.1
       tslib: 2.6.2
     dev: false
 
-  /@azure/logger@1.0.4:
-    resolution: {integrity: sha512-ustrPY8MryhloQj7OWGe+HrYx+aoiOxzbXTtgblbV3xwCqpzUK36phH3XNHQKj3EPonyFUuDTfR3qFhTEAuZEg==}
-    engines: {node: '>=14.0.0'}
+  /@azure/logger@1.1.1:
+    resolution: {integrity: sha512-/+4TtokaGgC+MnThdf6HyIH9Wrjp+CnCn3Nx3ggevN7FFjjNyjqg0yLlc2i9S+Z2uAzI8GYOo35Nzb1MhQ89MA==}
+    engines: {node: '>=18.0.0'}
     dependencies:
       tslib: 2.6.2
     dev: false
@@ -278,10 +285,10 @@ packages:
     dependencies:
       '@azure/abort-controller': 1.1.0
       '@azure/core-http': 3.0.4
-      '@azure/core-lro': 2.6.0
-      '@azure/core-paging': 1.5.0
+      '@azure/core-lro': 2.7.1
+      '@azure/core-paging': 1.6.1
       '@azure/core-tracing': 1.0.0-preview.13
-      '@azure/logger': 1.0.4
+      '@azure/logger': 1.1.1
       events: 3.3.0
       tslib: 2.6.2
     transitivePeerDependencies:
@@ -630,6 +637,11 @@ packages:
     engines: {node: '>=14'}
     dev: false
 
+  /@fastify/busboy@2.1.1:
+    resolution: {integrity: sha512-vBZP4NlzfOlerQTnba4aqZoMhE/a9HY7HRqoOPaETQcSQuWEIyZMHGfVu6w9wGtGK5fED5qRs2DteVCjOH60sA==}
+    engines: {node: '>=14'}
+    dev: false
+
   /@github/browserslist-config@1.0.0:
     resolution: {integrity: sha512-gIhjdJp/c2beaIWWIlsXdqXVRUz3r2BxBCpfz/F3JXHvSAQ1paMYjLH+maEATtENg+k5eLV7gA+9yPp762ieuw==}
     dev: true
@@ -961,7 +973,7 @@ packages:
       '@octokit/auth-token': 4.0.0
       '@octokit/graphql': 7.0.2
       '@octokit/request': 8.2.0
-      '@octokit/request-error': 5.0.1
+      '@octokit/request-error': 5.1.0
       '@octokit/types': 12.5.0
       before-after-hook: 2.2.3
       universal-user-agent: 6.0.1
@@ -1008,6 +1020,10 @@ packages:
 
   /@octokit/openapi-types@19.1.0:
     resolution: {integrity: sha512-6G+ywGClliGQwRsjvqVYpklIfa7oRPA0vyhPQG/1Feh+B+wU0vGH1JiJ5T25d3g1JZYBHzR2qefLi9x8Gt+cpw==}
+    dev: false
+
+  /@octokit/openapi-types@22.0.0:
+    resolution: {integrity: sha512-kWzSxSIBjCtwrT8/O/A/nrSjmHvR5I9GGTHPyBU19VuEae+QZfaPnnfLwXgV56n51xHN3U2dYy8zh/kO9/39ig==}
     dev: false
 
   /@octokit/plugin-paginate-rest@2.21.3(@octokit/core@3.6.0):
@@ -1081,11 +1097,11 @@ packages:
       once: 1.4.0
     dev: false
 
-  /@octokit/request-error@5.0.1:
-    resolution: {integrity: sha512-X7pnyTMV7MgtGmiXBwmO6M5kIPrntOXdyKZLigNfQWSEQzVxR4a4vo49vJjTWX70mPndj8KhfT4Dx+2Ng3vnBQ==}
+  /@octokit/request-error@5.1.0:
+    resolution: {integrity: sha512-GETXfE05J0+7H2STzekpKObFe765O5dlAKUTLNGeH+x47z7JjXHfsHKo5z21D/o/IOZTUEI6nyWyR+bZVP/n5Q==}
     engines: {node: '>= 18'}
     dependencies:
-      '@octokit/types': 12.5.0
+      '@octokit/types': 13.2.0
       deprecation: 2.3.1
       once: 1.4.0
     dev: false
@@ -1108,7 +1124,7 @@ packages:
     engines: {node: '>= 18'}
     dependencies:
       '@octokit/endpoint': 9.0.4
-      '@octokit/request-error': 5.0.1
+      '@octokit/request-error': 5.1.0
       '@octokit/types': 12.5.0
       universal-user-agent: 6.0.1
     dev: false
@@ -1129,14 +1145,20 @@ packages:
       '@octokit/openapi-types': 19.1.0
     dev: false
 
+  /@octokit/types@13.2.0:
+    resolution: {integrity: sha512-K4rpfbIQLe4UimS/PWZAcImhZUC80lhe2f1NpAaaTulPJXv54QIAFFCQEEbdQdqTV/745QDmdvp8NI49LaI00A==}
+    dependencies:
+      '@octokit/openapi-types': 22.0.0
+    dev: false
+
   /@octokit/types@6.41.0:
     resolution: {integrity: sha512-eJ2jbzjdijiL3B4PrSQaSjuF2sPEQPVCPzBvTHJD9Nz+9dw2SGH4K4xeQJ77YfTq5bRQ+bD8wT11JbeDPmxmGg==}
     dependencies:
       '@octokit/openapi-types': 12.11.0
     dev: false
 
-  /@opentelemetry/api@1.7.0:
-    resolution: {integrity: sha512-AdY5wvN0P2vXBi3b29hxZgSFvdhdxPB9+f0B6s//P9Q8nibRWeA3cHm8UmLpio9ABigkVHJ5NMPk+Mz8VCCyrw==}
+  /@opentelemetry/api@1.8.0:
+    resolution: {integrity: sha512-I/s6F7yKUDdtMsoBWXJe8Qz40Tui5vsuKCWJEWVL+5q9sSWRzzx6v2KeNsOBEwd94j0eWkpWCH4yB6rZg9Mf0w==}
     engines: {node: '>=8.0.0'}
     dev: false
 
@@ -1152,37 +1174,37 @@ packages:
     engines: {node: ^12.20.0 || ^14.18.0 || >=16.0.0}
     dev: true
 
-  /@protobuf-ts/plugin-framework@2.9.3:
-    resolution: {integrity: sha512-iqdkhAu7fGPvBCVOoAEEFJ1/oaGIBoNIMgSv2WonTNJVHxv5FvvAfWFn6nG/eta34fHRZT38ZXTaYcMUkv8AiQ==}
+  /@protobuf-ts/plugin-framework@2.9.4:
+    resolution: {integrity: sha512-9nuX1kjdMliv+Pes8dQCKyVhjKgNNfwxVHg+tx3fLXSfZZRcUHMc1PMwB9/vTvc6gBKt9QGz5ERqSqZc0++E9A==}
     dependencies:
-      '@protobuf-ts/runtime': 2.9.3
+      '@protobuf-ts/runtime': 2.9.4
       typescript: 3.9.10
     dev: false
 
-  /@protobuf-ts/plugin@2.9.3:
-    resolution: {integrity: sha512-tHYACv+nnIV2eoiMxeZhrgMqGiUktzUzrhfgnROg/rr8TecPLp9v5/yqNibN+bad5k7d57aqlTuQKhFl+J4W/g==}
+  /@protobuf-ts/plugin@2.9.4:
+    resolution: {integrity: sha512-Db5Laq5T3mc6ERZvhIhkj1rn57/p8gbWiCKxQWbZBBl20wMuqKoHbRw4tuD7FyXi+IkwTToaNVXymv5CY3E8Rw==}
     hasBin: true
     dependencies:
-      '@protobuf-ts/plugin-framework': 2.9.3
-      '@protobuf-ts/protoc': 2.9.3
-      '@protobuf-ts/runtime': 2.9.3
-      '@protobuf-ts/runtime-rpc': 2.9.3
+      '@protobuf-ts/plugin-framework': 2.9.4
+      '@protobuf-ts/protoc': 2.9.4
+      '@protobuf-ts/runtime': 2.9.4
+      '@protobuf-ts/runtime-rpc': 2.9.4
       typescript: 3.9.10
     dev: false
 
-  /@protobuf-ts/protoc@2.9.3:
-    resolution: {integrity: sha512-TJ0Ycx/CIBqpB4wpKt6K05kjXj6zv36s/qpdCT/wdJBhpayOVBqLF5NpLp3WIiw1PmIxvqalB6QHKjvnLzGKLA==}
+  /@protobuf-ts/protoc@2.9.4:
+    resolution: {integrity: sha512-hQX+nOhFtrA+YdAXsXEDrLoGJqXHpgv4+BueYF0S9hy/Jq0VRTVlJS1Etmf4qlMt/WdigEes5LOd/LDzui4GIQ==}
     hasBin: true
     dev: false
 
-  /@protobuf-ts/runtime-rpc@2.9.3:
-    resolution: {integrity: sha512-WelHpctvZeG8yhbb7tnsrLzotq9xjMCXuGuhJ8qMyEdNoBBEodbXseofAYFTebo2/PN2LzyEq3X6vwr5f8jqTA==}
+  /@protobuf-ts/runtime-rpc@2.9.4:
+    resolution: {integrity: sha512-y9L9JgnZxXFqH5vD4d7j9duWvIJ7AShyBRoNKJGhu9Q27qIbchfzli66H9RvrQNIFk5ER7z1Twe059WZGqERcA==}
     dependencies:
-      '@protobuf-ts/runtime': 2.9.3
+      '@protobuf-ts/runtime': 2.9.4
     dev: false
 
-  /@protobuf-ts/runtime@2.9.3:
-    resolution: {integrity: sha512-nivzCpg/qYD0RX2OmHOahJALb8ndjGmUhNBcTJ0BbXoqKwCSM6vYA+vegzS3rhuaPgbyC7Ec8idlnizzUfIRuw==}
+  /@protobuf-ts/runtime@2.9.4:
+    resolution: {integrity: sha512-vHRFWtJJB/SiogWDF0ypoKfRIZ41Kq+G9cEFj6Qm1eQaAhJ1LDFvgZ7Ja4tb3iLOQhz0PaoPnnOijF1qmEqTxg==}
     dev: false
 
   /@sinclair/typebox@0.27.8:
@@ -4327,8 +4349,8 @@ packages:
       minipass: 7.0.4
     dev: false
 
-  /path-to-regexp@6.2.1:
-    resolution: {integrity: sha512-JLyh7xT1kizaEvcaXOQwOc2/Yhw6KZOvPf1S8401UyLk86CU79LN3vl7ztXGm/pZ+YjoyAJ4rxmHwbkBXJX+yw==}
+  /path-to-regexp@6.2.2:
+    resolution: {integrity: sha512-GQX3SSMokngb36+whdpRXE+3f9V8UzyAorlYvOGx87ufGHehNTn5lCxrKtLyZ4Yl/wEKnNnr98ZzOwwDZV5ogw==}
     dev: false
 
   /path-type@4.0.0:
@@ -4955,7 +4977,7 @@ packages:
     engines: {node: '>=0.6.11 <=0.7.0 || >=0.7.3'}
     dev: false
 
-  /twirp-ts@2.5.0(@protobuf-ts/plugin@2.9.3):
+  /twirp-ts@2.5.0(@protobuf-ts/plugin@2.9.4):
     resolution: {integrity: sha512-JTKIK5Pf/+3qCrmYDFlqcPPUx+ohEWKBaZy8GL8TmvV2VvC0SXVyNYILO39+GCRbqnuP6hBIF+BVr8ZxRz+6fw==}
     hasBin: true
     peerDependencies:
@@ -4967,11 +4989,11 @@ packages:
       ts-proto:
         optional: true
     dependencies:
-      '@protobuf-ts/plugin': 2.9.3
-      '@protobuf-ts/plugin-framework': 2.9.3
+      '@protobuf-ts/plugin': 2.9.4
+      '@protobuf-ts/plugin-framework': 2.9.4
       camel-case: 4.1.2
       dot-object: 2.1.4
-      path-to-regexp: 6.2.1
+      path-to-regexp: 6.2.2
       ts-poet: 4.15.0
       yaml: 1.10.2
     dev: false
@@ -5069,6 +5091,13 @@ packages:
     engines: {node: '>=14.0'}
     dependencies:
       '@fastify/busboy': 2.1.0
+    dev: false
+
+  /undici@5.28.4:
+    resolution: {integrity: sha512-72RFADWFqKmUb2hmmvNODKL3p9hcB6Gt2DOQMis1SEBaV6a4MH8soBvzg+95CYhCKPFedut2JY9bMfrDl9D23g==}
+    engines: {node: '>=14.0'}
+    dependencies:
+      '@fastify/busboy': 2.1.1
     dev: false
 
   /universal-user-agent@6.0.1:
